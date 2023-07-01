@@ -1,68 +1,70 @@
 non_pii_keys:
-    customers:
+  customers:
     - id
     - notes
-    justifications:
+  justifications:
     - source
     - type
     - createdAt
     - updatedAt
-    establishments:
+  establishments:
     - id
-    settings:
+  settings:
     - id
 conditional_non_pii_keys:
-    justifications:
-        justice:
-        - 'mahatma'
-        # test for case insensitivity
-        Reason:
-        - 'want'
-    customers:
-        email:
-        - '%example.com'
-        - '%exampledev.com'
-        notes:
-        - 'I am not interested in politics'
+  justifications:
+    justice:
+      - "mahatma"
+    # test for case insensitivity
+    Reason:
+      - "want"
+  customers:
+    email:
+      - "%example.com"
+      - "%exampledev.com"
+    notes:
+      - "I am not interested in politics"
 dependent_non_pii_keys:
-    justifications::
-        # test for case insensitivity
-        Justice:
-            # test for case insensitivity
-            Reason:
-            - 'want'
-    customers:
-        # dependentColumnName
-        first_name:
-            # providerColumn
-            last_name:
-            - 'Jones'
-            - 'Dhoni'
+  justifications::
+    # test for case insensitivity
+    Justice:
+      # test for case insensitivity
+      Reason:
+        - "want"
+  customers:
+    # dependentColumnName
+    first_name:
+      # providerColumn
+      last_name:
+        - "Jones"
+        - "Dhoni"
 length_keys:
-    customers:
+  customers:
     - email
 mobile_keys:
-    customers:
+  customers:
     - mobile_number
 mapping_pii_keys:
-    establishments:
+  establishments:
     - id
 sort_keys:
-    customers:
+  customers:
     - id
-    justifications:
+  justifications:
     - createdAt
 dist_keys:
-    customers:
+  customers:
     - email
-    justifications:
+  justifications:
     - source
 regex_pattern_boolean_keys:
-    customers:
-        favourite_quote:
-            has_philosphy: 'life|time'
-        favourite_food:
-            has_pizza: 'pizza'
-        dob:
-            1986born: '1986-.*'
-            1988born: '1988-.*'
+  customers:
+    favourite_quote:
+      has_philosphy: "life|time"
+    favourite_food:
+      has_pizza: "pizza"
+    dob:
+      1986born: "1986-.*"
+      1988born: "1988-.*"
+
+include_tables: ["dumb_table"]
