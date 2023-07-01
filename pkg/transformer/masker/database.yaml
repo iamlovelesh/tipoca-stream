@@ -67,4 +67,4 @@ regex_pattern_boolean_keys:
       1986born: "1986-.*"
       1988born: "1988-.*"
 
-include_tables: ["dumb_table"]
+include_tables: ["test"]
